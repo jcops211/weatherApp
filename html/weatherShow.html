@@ -5,38 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Results</title>
-
     <link rel="stylesheet" href="../css/output.css">
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
-
-        .bg-image {
-            background-image: url('../img/sunny.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
 </head>
 
-<body class="bg-gray-100">
-<div class="bg-image h-full w-full absolute top-0 left-0 z-0"></div>
-<div class="container mx-auto px-4 py-8 relative z-10">
-    <div class="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden">
-        <div class="flex">
-            <div class="p-8">
-                <div class="uppercase tracking-wide text-3xl font-bold text-gray-500">Temperature</div>
-                <div id="temps" class="mt-4 text-6xl font-semibold text-gray-900">{{temp}}&deg;F</div>
-                <div class="mt-8">
-                    <div class="uppercase tracking-wide text-3xl font-bold text-gray-500">Condition</div>
-                    <div id="descrip" class="mt-4 text-2xl font-semibold text-gray-900">{{description}}</div>
-                </div>
-            </div>
+<body class="bg-blue-400">
+    <div class="grid grid-cols-3 grid-rows-6 justify-center place-items-center">
+        <div id="loc" class="col-start-2 col-end-2 text-5xl text-white font-bold">{Location}</div>
+        <div id="temps" class="col-start-2 row-start-2 text-6xl font-thin text-white">{{temp}}&deg;F</div>
+        <div id="descrip" class="col-start-2 row-start-3 text-2xl font-thin text-white">{{description}}</div>
+        <p class="col-start-1 row-start-3">Precipitation</p>
+        <p class="col-start-1 row-start-5">Humidity</p>
+        <p class="col-start-1 row-start-6" id="humidity">{Humidity}</p>
+        <p class="col-start-1 row-start-4" id="precip">{Precip %}</p>
+        <p>Local Time</p>
+        <p>UV Index</p>
+        <p id="time">Time</p>
+        <p id="uvIndex">UVI</p>
+        <p>Feels Like</p>
+        <div id="feelsLike" class="row-start-3 row-end-3">{Feels Temp}</div>
         </div>
     </div>
-</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script type="module" src="../js/second.js"></script>

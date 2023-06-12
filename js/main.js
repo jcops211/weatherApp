@@ -5,22 +5,27 @@ let uvIndex ;
 let currTime;
 let description;
 let valid = true;
+let loc = "Hello!";
+let feelsLike;
 function handleInput() {
     let apiKey = 'fcc0735fb36e11df3f7e3670083ed6c1';
     let url = 'http://api.weatherstack.com/current?access_key=' + apiKey;
-    let input = ($("#input-text").val());
+    loc = ($("#input-text").val());
+    console.log(loc);
     $.get({
         url: url,
-        data: {"query":input, "units":"f"},
+        data: {"query":loc, "units":"f"},
         async: false,
         success: function(response) {
             try {
+                loc = response.current.name;
                 temp = response.current.temperature;
                 humidity = response.current.humidity;
                 precip = response.current.precip;
                 uvIndex = response.current.uv_index;
                 currTime = response.location.localtime;
                 description = response.current.weather_descriptions[0];
+                feelsLike = response.current.feelslike;
             } catch(error) {
                 let hi = response.error.info;
                 $('#errorCatch').show().text(hi + " Please try again.");
@@ -44,6 +49,13 @@ function react() {
     setTimeout(function() {
         sessionStorage.setItem("temperature", temp);
         sessionStorage.setItem("description", description);
+        sessionStorage.setItem("loc", loc);
+        sessionStorage.setItem("uv", uvIndex);
+        sessionStorage.setItem("time", currTime);
+        sessionStorage.setItem("precip", precip);
+        sessionStorage.setItem("humidity", humidity);
+        sessionStorage.setItem("feelsLike", feelsLike);
+
         window.location.href = ("weatherShow.html");
     }, 2000);
 }
