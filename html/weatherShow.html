@@ -9,21 +9,22 @@
 </head>
 
 <body class="bg-blue-400">
-    <div class="grid grid-cols-3 grid-rows-6 justify-center place-items-center">
+    <div class="grid grid-cols-3 grid-rows-6 justify-center place-items-center gap-y-10">
         <div id="loc" class="col-start-2 col-end-2 text-5xl text-white font-bold">{Location}</div>
-        <div id="temps" class="col-start-2 row-start-2 text-6xl font-thin text-white">{{temp}}&deg;F</div>
+        <div id="temps" class="col-start-2 row-start-2 text-6xl font-thin text-white ">{{temp}}&deg;F</div>
         <div id="descrip" class="col-start-2 row-start-3 text-2xl font-thin text-white">{{description}}</div>
-        <p class="col-start-1 row-start-3">Precipitation</p>
-        <p class="col-start-1 row-start-5">Humidity</p>
-        <p class="col-start-1 row-start-6" id="humidity">{Humidity}</p>
-        <p class="col-start-1 row-start-4" id="precip">{Precip %}</p>
-        <p>Local Time</p>
-        <p>UV Index</p>
-        <p id="time">Time</p>
-        <p id="uvIndex">UVI</p>
-        <p>Feels Like</p>
-        <div id="feelsLike" class="row-start-3 row-end-3">{Feels Temp}</div>
-        </div>
+        <p class="row-start-4 font-extralight">Precipitation</p>
+        <p class="row-start-5 font-extralight" id="precip">{Precip %}</p>
+        <p class="row-start-4 col-start-2 font-medium ">Feels Like</p>
+        <div id="feelsLike" class="row-start-5 col-start-2 font-extralight">{Feels Temp}</div>
+        <p class="col-start-3 row-start-1 font-extralight">Local Time</p>
+        <p id="time" class="col-start-3 row-start-2 font-extralight">Time</p>
+        <p class="row-start-4 col-start-3 font-extralight">UV Index</p>
+        <p id="uvIndex" class="row-start-5 col-start-3 font-extralight">{UV Index}</p>
+        <p class="row-start-6 col-start-2 font-extralight">Humidity</p>
+        <p class="row-start-7 col-start-2 font-extralight" id="humidity">{Humidity}</p>
+
+
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

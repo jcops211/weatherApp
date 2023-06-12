@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#feelsLike").text(sessionStorage.getItem("feelsLike"));
     $("#uvIndex").text(sessionStorage.getItem("uv"));
     $("#time").text(sessionStorage.getItem("time"));
-    $("#precip").text(sessionStorage.getItem("precip"));
+    $("#precip").text(sessionStorage.getItem("precip" + "in"));
     $("#humidity").text(sessionStorage.getItem("humidity") + '%');
 })
 
