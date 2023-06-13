@@ -8,22 +8,21 @@
     <link rel="stylesheet" href="../css/output.css">
 </head>
 
-<body class="bg-blue-400">
+<body class="bg-cover bg-no-repeat w-full h-full" style="background-image: url('https://www.daytondailynews.com/resizer/bbWLB1p7NlcfG9qUvPLId8Xcjh8=/814x458/cloudfront-us-east-1.images.arcpublishing.com/coxohio/NW7C3XNSONEWZHANRP5YUS7IYQ.jpg')">
     <div class="grid grid-cols-3 grid-rows-6 justify-center place-items-center gap-y-10">
-        <div id="loc" class="col-start-2 col-end-2 text-5xl text-white font-bold">{Location}</div>
-        <div id="temps" class="col-start-2 row-start-2 text-6xl font-thin text-white ">{{temp}}&deg;F</div>
-        <div id="descrip" class="col-start-2 row-start-3 text-2xl font-thin text-white">{{description}}</div>
-        <p class="row-start-4 font-extralight">Precipitation</p>
-        <p class="row-start-5 font-extralight" id="precip">{Precip %}</p>
-        <p class="row-start-4 col-start-2 font-medium ">Feels Like</p>
-        <div id="feelsLike" class="row-start-5 col-start-2 font-extralight">{Feels Temp}</div>
-        <p class="col-start-3 row-start-1 font-extralight">Local Time</p>
-        <p id="time" class="col-start-3 row-start-2 font-extralight">Time</p>
-        <p class="row-start-4 col-start-3 font-extralight">UV Index</p>
-        <p id="uvIndex" class="row-start-5 col-start-3 font-extralight">{UV Index}</p>
-        <p class="row-start-6 col-start-2 font-extralight">Humidity</p>
-        <p class="row-start-7 col-start-2 font-extralight" id="humidity">{Humidity}</p>
-
+        <div id="loc" class="col-start-2 col-end-2 text-5xl font-bold">{Location}</div>
+        <div id="temps" class="col-start-2 row-start-2 text-6xl font-thin">{{temp}}&deg;F</div>
+        <div id="descrip" class="col-start-2 row-start-3 text-2xl font-thin">{{description}}</div>
+        <p class="row-start-4 ">Precipitation</p>
+        <p class="row-start-5 col-start-1 " id="precip">{Precip %}</p>
+        <p class="row-start-4 col-start-2 ">Feels Like</p>
+        <div id="feelsLike" class="row-start-5 col-start-2 ">{Feels Temp}</div>
+        <p class="col-start-3 row-start-1 ">Local Time</p>
+        <p id="time" class="col-start-3 row-start-2 ">Time</p>
+        <p class="row-start-4 col-start-3 ">UV Index</p>
+        <p id="uvIndex" class="row-start-5 col-start-3 ">{UV Index}</p>
+        <p class="row-start-6 col-start-2 ">Humidity</p>
+        <p class="row-start-7 col-start-2 " id="humidity">{Humidity}</p>
 
     </div>
 </body>

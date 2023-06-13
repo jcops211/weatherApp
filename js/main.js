@@ -18,7 +18,6 @@ function handleInput() {
         async: false,
         success: function(response) {
             try {
-                loc = response.current.name;
                 temp = response.current.temperature;
                 humidity = response.current.humidity;
                 precip = response.current.precip;
@@ -43,6 +42,7 @@ function handleInput() {
 function react() {
     if(handleInput()) {
         $("#successMessage").show().text("Success! Redirecting...");
+        console.log(loc);
     } else {
         return;
     }
